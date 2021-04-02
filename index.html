@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MarkStrat</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+	<style>
+
+		.cardWrapperone {
+			background-image: url("images/buttonIconsGrey/one.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperone:hover {
+			background-image: url("images/buttonIcons/one.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperone .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 150px;
+			right: 50%;
+		}
+
+		.cardWrapperone:hover .tooltipone {
+			visibility: visible;
+		}
+
+		.cardWrappertwo {
+			background-image: url("images/buttonIconsGrey/two.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrappertwo:hover {
+			background-image: url("images/buttonIcons/two.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrappertwo .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 150px;
+			right: 25%;
+		}
+
+		.cardWrappertwo:hover .tooltipone {
+			visibility: visible;
+		}
+
+		.cardWrapperthree {
+			background-image: url("images/buttonIconsGrey/three.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperthree:hover {
+			background-image: url("images/buttonIcons/three.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperthree .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 300px;
+			right: 25%;
+		}
+
+		.cardWrapperthree:hover .tooltipone {
+			visibility: visible;
+		}
+
+		.cardWrapperfour {
+			background-image: url("images/buttonIconsGrey/four.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperfour:hover {
+			background-image: url("images/buttonIcons/four.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperfour .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 350px;
+			right: 65%;
+		}
+
+		.cardWrapperfour:hover .tooltipone {
+			visibility: visible;
+		}
+
+		.cardWrapperfive {
+			background-image: url("images/buttonIconsGrey/five.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperfive:hover {
+			background-image: url("images/buttonIcons/five.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrapperfive .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 350px;
+			right: 35%;
+		}
+
+		.cardWrapperfive:hover .tooltipone {
+			visibility: visible;
+		}
+
+		.cardWrappersix {
+			background-image: url("images/buttonIconsGrey/six.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrappersix:hover {
+			background-image: url("images/buttonIcons/six.png");
+			background-size: cover;
+			margin: 20px;
+		}
+
+		.cardWrappersix .tooltipone {
+			visibility: hidden;
+			width: 320px;
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			text-align: center;
+			border-radius: 10px;
+			padding: 10px;
+			opacity: 0.8;
+			box-shadow: 5px 5px rgb(238, 237, 237);
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 350px;
+			right: 15%;
+		}
+
+		.cardWrappersix:hover .tooltipone {
+			visibility: visible;
+		}
+
+		@media only screen and (max-width: 575px) {
+			.cardWrapperone {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperone:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix:hover {
+				height: 250px;
+				width: 250px;
+			}
+		}
+
+		@media only screen and (min-width: 576px) and (max-width: 767px) {
+			.cardWrapperone {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperone:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix:hover {
+				height: 250px;
+				width: 250px;
+			}
+		}
+
+		@media only screen and (min-width: 768px) and (max-width: 991px) {
+			.cardWrapperone {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperone:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix:hover {
+				height: 250px;
+				width: 250px;
+			}
+		}
+
+		@media only screen and (min-width: 992px) and (max-width: 1199px) {
+			.cardWrapperone {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperone:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappertwo:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperthree:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfour:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrapperfive:hover {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix {
+				height: 250px;
+				width: 250px;
+			}
+			.cardWrappersix:hover {
+				height: 250px;
+				width: 250px;
+			}
+		}
+
+		@media only screen and (min-width: 1200px) {
+			.cardWrapperone {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperone:hover {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrappertwo {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrappertwo:hover {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperthree {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperthree:hover {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperfour {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperfour:hover {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperfive {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrapperfive:hover {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrappersix {
+				height: 300px;
+				width: 300px;
+			}
+			.cardWrappersix:hover {
+				height: 300px;
+				width: 300px;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<div style="display: flex; height: 80px; width: 100%; justify-content: space-between;">
+			<a href="index.html">
+				<img src="./images/logo/logo.png" style="height: 50px; width: 150px; object-fit: cover; margin-left: 50px; margin-top: 20px;"/>
+			</a>
+			<div style="display: flex; flex-direction: row; margin-right: 5%;">
+				<!-- <button style="margin-right: 25px; padding-bottom: 10px;">
+					<img src="./images/icons/search.png" style="width: 20px; height: 20px;"/>
+				</button> -->
+				<a href="whoWeAre.html">
+					<div style="display: flex; height: 30px; width: 100px; background-color: #F2F2F2; border-radius: 20px; margin-top: 20px; justify-content: center; align-items: center; margin-right: 10px;">
+						<p style="color: #6829C1; font-size: 12px; font-family: Poppins;">Who we are</p>
+					</div>
+				</a>
+				<a href="http://www.google.com">
+					<div style="display: flex; height: 30px; width: 100px; background-color: #F2F2F2; border-radius: 20px; margin-top: 20px; justify-content: center; align-items: center; margin-right: 10px;">
+						<p style="color: #6829C1; font-size: 12px; font-family: Poppins;">Our services</p>
+					</div>
+				</a>
+				<a href="http://www.google.com">
+					<div style="display: flex; height: 30px; width: 100px; background-color: #F2F2F2; border-radius: 20px; margin-top: 20px; justify-content: center; align-items: center; margin-right: 10px;">
+						<p style="color: #6829C1; font-size: 12px; font-family: Poppins;">Our team</p>
+					</div>
+				</a>
+				<a href="contactUs.html">
+					<div style="display: flex; height: 30px; width: 100px; background-color: #F2F2F2; border-radius: 20px; margin-top: 20px; justify-content: center; align-items: center; margin-right: 10px;">
+						<p style="color: #6829C1; font-size: 12px; font-family: Poppins;">Contact us</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div style="display: flex; align-content: center; align-self: center;">
+			<div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; margin-left: 10%; margin-right: 10%;">
+				<a href="creativeTeam.html">
+					<div class="cardWrapperone">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">CREATIVE TEAM</p>
+								<p style="font-size: 10px; font-family: Poppins;">Our very own creative team comprises expert graphic designers and creatives that bring about attention grabbing ideas that will entice the consumers in your target audience.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+				<a href="eventManagement.html">
+					<div class="cardWrappertwo">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">EVENT MANAGEMENT</p>
+								<p style="font-size: 10px; font-family: Poppins;">Our effort is to  thrive for excellence. We are an expertised team with an excellent capacity in organizing events ranging from corporate functions, get-togethers, product launches to larger scale conferences which would relish the participants with extraordinary service.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+				<a href="successStory.html">
+					<div class="cardWrapperthree">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">BTL SUCCESS STORY</p>
+								<p style="font-size: 10px; font-family: Poppins;">Making your brand stand out from others, we initiate BTL marketing campaigns confirming an effective impact on the brand awareness while creating strong relationships with your customers.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+				<a href="digitalStratagies.html">
+					<div class="cardWrapperfour">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">DIGITAL STRATEGIES</p>
+								<p style="font-size: 10px; font-family: Poppins;">Our team is armed with the right mix of talents to execute data driven and targeted brand promotion through technology while developing a unique brand identity to your company in digital media.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+				<a href="activation.html">
+					<div class="cardWrapperfive">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">ACTIVATION</p>
+								<p style="font-size: 10px; font-family: Poppins;">With the belief that a memorable activation would create a memorable brand, Team Markstrat provides an array of brand activation services including town stormings, outlet promotions, door to door sales promotions and any other customized activations ensuring your brand would reach the right customers.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+				<a href="conceptsAndProduction.html">
+					<div class="cardWrappersix">
+						<span class="tooltipone">
+							<div style="display: flex; flex-direction: column;">
+								<p style="font-size: 12px; color: #6829C1; font-weight: 700; font-family: Poppins;">CONCEPTS & PRODUCTION</p>
+								<p style="font-size: 10px; font-family: Poppins;">Team Markstrat develops Big Ideas that captures audience interest, influences the emotional response and inspires actions providing eye catchy visual material and quality production while creating memorable experiences for customers.</p>
+							</div>
+						</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

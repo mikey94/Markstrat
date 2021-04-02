@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MarkStrat</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+	<style>
+        .mainImage {
+			background-image: url("images/buttonIcons/seven.png");
+            background-size: cover;
+            height: 400px;
+            width: 400px;
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .wrapper {
+            display: flex;
+            flex: 0.4;
+            margin: 30px;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 5px 5px rgb(238, 237, 237);
+            flex-direction: column;
+        }
+        .file-upload {
+            display: flex;
+            width: 300px;
+            height: 50px;
+            background-color: #812CE5;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid #812CE5;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-family: Poppins;
+        }
+        span {
+            font-size: 30px;
+            font-weight: "bold";
+        }
+        textarea[type=text] {
+            margin-top: 10px;
+            margin-right: 10px;
+            font-family: Poppins;
+            border: 2px solid #812CE5;
+            border-radius: 4px;
+            height: 250px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+	</style>
+</head>
+<script>
+    function show(show, hidden) {
+        document.getElementById(show).style.display="block"
+        document.getElementById(hidden).style.display="none"
+        return false;
+    }
+</script>
+<body>
+	<div>
+		<div style="display: flex; height: 80px; width: 100%; justify-content: space-between;">
+			<a href="index.html">
+				<img src="./images/logo/logo.png" style="height: 50px; width: 150px; object-fit: cover; margin-left: 50px; margin-top: 20px;"/>
+            </a>
+        </div>
+        <div id="page1">
+            <div class="wrapper">
+                <form style="display: flex; flex-direction: column;" id="contact" action="email.php" method="POST">
+                    <p style="color: #6829C1; font-weight: 700; font-family: Poppins;">START A PROJECT</p>
+                    <p style="margin-top: 20px; font-family: Poppins; font-size: 12px;">Thanks for your interest in working with us. Please complete the details below and we’ll get back to you within one business day.</p>
+                    <p style="margin-top: 20px; font-weight: 800; font-family: Poppins;">What should we call you?</p>
+                    <input type="text" placeholder="Your name here" name="name" id="name"><br>
+                    <p style="margin-top: 20px; font-weight: 800; font-family: Poppins;">What is the name of your company / organisation?</p>
+                    <input type="text" placeholder="Widgest inc" name="company" id="company"><br>
+                    <div style="display: flex; flex-direction: column;">
+                        <p style="margin-top: 20px; font-weight: 800; font-family: Poppins;">How shall we contact you?</p>
+                        <div style="display: flex; flex-direction: row;">
+                            <input type="text" placeholder="Email address" name="email" id="email"><br><br>
+                            <input type="text" placeholder="Phone  Number" name="phone" id="phone"><br><br>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px;">
+                        <a href="contactUs.html">
+                            <P style="margin-top: 10px; text-align: left; font-size: 20px; font-weight: 600; font-family: Poppins; color: #6829C1;"><span>&#8592;</span>Back</P>
+                        </a>
+                        <a href="#" onclick="return show('page2','page1')">
+                            <P id="btn-next" style="margin-top: 10px; text-align: left; font-size: 20px; font-weight: 600; font-family: Poppins; color: #6829C1;">Next<span>&#8594;</span></P>
+                        </a>  
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="page2" style="display: none;">
+            <div class="wrapper">
+                <form style="display: flex; flex-direction: column;" id="contact" action="email.php" method="POST">
+                    <p style="color: #6829C1; font-weight: 700; font-family: Poppins; font-size: 25px;">Tell Us About The Project</p>
+                    <p style="margin-top: 20px; font-weight: 400; font-family: Poppins;">Describe the project</p>
+                    <textarea id="description" type="text" name="description"></textarea><br>
+                    <p style="margin-top: 10px; font-weight: 400; font-family: Poppins; font-size: 12px;">Attach any relevant documents ( Optional )</p>
+                    <!-- <input type="file" id="my-file" name="my-file" style="width: 300px; height: 50px; background-color: #812CE5; margin-top: 20px;"></input> -->
+                    <!-- <p style="display: flex; color: floralwhite; justify-content: center; align-items: center; font-family: Poppins; font-size: 12px;">Drag and drop files here. Maximum 10mb.</p> -->
+                    <label class="file-upload">
+                        <input type="file" id="my-file" name="my-file" hidden></input>
+                        <p style="display: flex; color: floralwhite; justify-content: center; align-items: center; font-family: Poppins; font-size: 12px;">Drag and drop files here. Maximum 10mb.</p>
+                    </label>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px;">
+                        <a href="#" onclick="return show('page1','page2')">
+                            <P style="margin-top: 10px; text-align: left; font-size: 20px; font-weight: 600; font-family: Poppins; color: #6829C1;"><span>&#8592;</span>Back</P>
+                        </a>
+                        <a href="#">
+                            <P id="btn-submit" style="margin-top: 20px; text-align: left; font-size: 20px; font-weight: 600; font-family: Poppins; color: #6829C1;">Submit</P>
+                        </a>  
+                    </div>
+                </form>
+            </div>
+        </div>
+	</div>
+
+
+
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var name;
+        var company; 
+        var email; 
+        var phone;
+        var description;
+    
+        $('#btn-next').click(function(){ 
+            name = $("#name").val();
+            company = $("#company").val();
+            email = $("#email").val();
+            phone = $("#phone").val();
+        });
+
+        $('#btn-submit').click(function(){ 
+            var formData = new FormData()
+            description  = $("#description").val();
+
+            formData.append('name', name);
+            formData.append('company', company);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('description', description);
+            formData.append('file', $('#my-file').prop('files')[0]);
+
+            console.log(name);
+            console.log(company);
+            console.log(email);
+            console.log(phone);
+            const varData = "";
+
+            $.ajax({
+                type: "POST",
+                url: 'mail.php',
+                // processData: false,
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(res){
+                    alert("Email send successfully")
+                }
+            })
+
+        });
+    </script>
+</body>
+
+</html>
